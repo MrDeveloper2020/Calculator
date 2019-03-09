@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#29B6F6">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView2_light"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardBackgroundColor="#263238"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <TextView
+                android:id="@+id/display_light"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:cursorVisible="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:text="143"
+                android:textColor="#ffffff"
+                android:textSize="60sp"
+                android:fontFamily="casual"/>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2_light"
+        android:layout_width="match_parent"
+        android:layout_height="405dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_light">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="#29B6F6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button_factorial_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/circle"
+                    android:onClick="Button_Click"
+                    android:elevation="8dp"
+                    android:text="!"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toTopOf="@+id/button_seven_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread" />
+
+                <Button
+                    android:id="@+id/button_seven_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/circle"
+                    android:onClick="Button_Click"
+                    android:elevation="8dp"
+                    android:text="7"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toTopOf="@+id/button_four_light"
+                    app:layout_constraintEnd_toEndOf="@+id/button_factorial_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_factorial_light"
+                    app:layout_constraintTop_toBottomOf="@+id/button_factorial_light" />
+
+                <Button
+                    android:id="@+id/button_four_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/circle"
+                    android:onClick="Button_Click"
+                    android:elevation="8dp"
+                    android:text="4"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toTopOf="@+id/button_one_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_seven_light"
+                    app:layout_constraintTop_toBottomOf="@+id/button_seven_light" />
+
+                <Button
+                    android:id="@+id/button_one_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:text="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:onClick="Button_Click"
+                    app:layout_constraintBottom_toTopOf="@+id/button_ac_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_four_light"
+                    app:layout_constraintTop_toBottomOf="@+id/button_four_light" />
+
+                <Button
+                    android:id="@+id/button_ac_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:onClick="Button_Click"
+                    android:text="Ac"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/button_one_light"
+                    app:layout_constraintTop_toBottomOf="@+id/button_one_light" />
+
+                <com.github.angads25.toggle.LabeledSwitch
+                    android:id="@+id/button_switch_light"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="12dp"
+                    android:textSize="14sp"
+                    app:colorBorder="#FFEB3B"
+                    app:colorOff="#263238"
+                    app:colorOn="#29B6F6"
+                    app:layout_constraintStart_toEndOf="@+id/button_factorial_light"
+                    app:layout_constraintTop_toTopOf="@+id/button_factorial_light"
+                    app:on="false"
+                    app:textOff="Night"
+                    app:textOn="Light"
+
+                    />
+
+                <Button
+                    android:id="@+id/button_eight_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:text="8"
+                    android:onClick="Button_Click"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_seven_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_switch_light" />
+
+                <Button
+                    android:id="@+id/button_five_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:onClick="Button_Click"
+                    android:text="5"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_four_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_eight_light" />
+
+                <Button
+                    android:id="@+id/button_two_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:text="2"
+                    android:onClick="Button_Click"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_one_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_five_light" />
+
+                <Button
+                    android:id="@+id/button_zero_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:onClick="Button_Click"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_ac_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_two_light" />
+
+                <Button
+                    android:id="@+id/button_power_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:onClick="Button_Click"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:text="^"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_factorial_light"
+                    app:layout_constraintStart_toEndOf="@+id/button_switch_light" />
+
+                <Button
+                    android:id="@+id/button_nine_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:text="9"
+                    android:onClick="Button_Click"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_eight_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_power_light" />
+
+                <Button
+                    android:id="@+id/button_six_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:onClick="Button_Click"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:text="6"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_five_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_nine_light" />
+
+                <Button
+                    android:id="@+id/button_three_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:onClick="Button_Click"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:text="3"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_two_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_six_light" />
+
+                <Button
+                    android:id="@+id/button_dot_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:onClick="Button_Click"
+                    android:text="."
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_zero_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_three_light" />
+
+                <Button
+                    android:id="@+id/button_division_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:onClick="Button_Click"
+                    android:text="/"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_power_light"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/button_power_light" />
+
+                <Button
+                    android:id="@+id/button_multiply_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:onClick="Button_Click"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:text="*"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_nine_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_division_light" />
+
+                <Button
+                    android:id="@+id/button_mines_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:onClick="Button_Click"
+                    android:text="-"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_six_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_multiply_light" />
+
+                <Button
+                    android:id="@+id/button_add_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:onClick="Button_Click"
+                    android:background="@drawable/circle"
+                    android:elevation="8dp"
+                    android:text="+"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_three_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_mines_light" />
+
+                <Button
+                    android:id="@+id/button_equal_light"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/circle_black"
+                    android:elevation="8dp"
+                    android:onClick="Button_Click"
+                    android:text="="
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/button_dot_light"
+                    app:layout_constraintStart_toStartOf="@+id/button_add_light" />
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
