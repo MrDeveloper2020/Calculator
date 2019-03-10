@@ -17,11 +17,13 @@ public class MainActivity extends AppCompatActivity {
     private Button button0,button1,button2,button3,button4,button5,button6,button7,button8,button9;
     private Button buttonPlus,buttonSub,buttonMul,buttonDiv,buttonAc,buttonDot,buttonEqual,buttonPow,buttonFac;
 
-    private TextView result;
+    public TextView result;
 
     private float num1,num2;
     private String OP ="";
     private boolean flag = false;
+
+    int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +39,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        result.setText("0");
         findView();
+        result.setText("0");
+
 
     }
 
@@ -86,6 +89,18 @@ public class MainActivity extends AppCompatActivity {
         else if (id == R.id.button_seven_light) setNum(7);
         else if (id == R.id.button_eight_light) setNum(8);
         else if (id == R.id.button_nine_light) setNum(9);
+        else if(id == R.id.button_dot_light){
+            if(count ==0 && result.length()!=0){
+                result.setText(result.getText()+".");
+                count++;
+            }
+        }
+        else if (id == R.id.button_power_light){
+            if(result.length()!=0){
+                String tmp = result.getText().toString();
+                result.setText("("+tmp+")^2");
+            }
+        }
 
         else if (id == R.id.button_add_light){
             num1 = Float.parseFloat(result.getText().toString());
@@ -128,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
             OP = "";
             result.setText("0");
             flag = false;
+            count=0;
         }
 
     }
@@ -135,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
     void setNum(int num){
         String tmp = result.getText().toString();
         if (OP == "") {
-            if (tmp.equalsIgnoreCase("0")) result.setText(num + "");
+            if (tmp.equalsIgnoreCase("0")) result.setText(num);
             else
                 result.setText(tmp + num);
         }

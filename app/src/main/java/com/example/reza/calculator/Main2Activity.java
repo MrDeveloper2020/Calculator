@@ -23,6 +23,8 @@ public class Main2Activity extends AppCompatActivity {
     private String OP ="";
     private boolean flag = false;
 
+    int count;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +38,9 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        result.setText("0");
         findView();
+        result.setText("0");
+
     }
 
     private void findView() {
@@ -84,6 +87,18 @@ public class Main2Activity extends AppCompatActivity {
         else if (id == R.id.button_seven_night) setNum(7);
         else if (id == R.id.button_eight_night) setNum(8);
         else if (id == R.id.button_nine_night) setNum(9);
+        else if(id == R.id.button_dot_light){
+            if(count ==0 && result.length()!=0){
+                result.setText(result.getText()+".");
+                count++;
+            }
+        }
+        else if (id == R.id.button_power_light){
+            if(result.length()!=0){
+                String tmp = result.getText().toString();
+                result.setText("("+tmp+")^2");
+            }
+        }
 
         else if (id == R.id.button_add_night){
             num1 = Float.parseFloat(result.getText().toString());
@@ -126,6 +141,7 @@ public class Main2Activity extends AppCompatActivity {
             OP = "";
             result.setText("0");
             flag = false;
+            count=0;
         }
 
     }
